@@ -1,0 +1,99 @@
+*{
+  margin:0;
+  padding: 0;
+}
+h3{
+  margin-top:5px;
+  margin-bottom:5px;
+  text-align: center;
+}
+.selection,.swiper-pagination{
+  font-family: 'Mochiy Pop P One', sans-serif;
+  font-size:15px;
+}
+
+h3{
+  color:red;
+}
+#btn{
+ font-family: 'Mochiy Pop P One', sans-serif;
+  border:none;
+  border-radius:10px;
+  padding:6px;
+  width:20%;
+  color:white;
+  background-color: #f80;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+
+pre {
+font-family: 'Noto Sans Telugu';
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+font-weight:400;
+margin-left:2%;
+line-height:35px;
+font-size: 19px;
+
+}
+
+.share{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-content: center;
+  align-items: center;
+}
+#img_a{
+  width:30px;
+  margin-top:10px;
+  margin-left:10px;
+  margin-right:10px;
+}
+.select2-container--default .select2-results>.select2-results__options{
+  text-align: center;
+  color:rgb(29, 27, 26);
+  font-family:'Mochiy Pop P One', sans-serif;
+}
+.select2-results__option[aria-selected] {
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+}
+
+
+
+      body{
+        background-color: #f8f5de;
+        background-image: linear-gradient(to right,rgba(0,0,0,0), rgba(200, 160, 0, 0.1) 11%, rgba(0,0,0,0) 35%, rgba(200, 160, 0, 0.1) 65%);
+        box-shadow: inset 0 0 50px rgba(255,210,0,0.3), inset 0 0 20px  rgba(255,210,0,0.3), inset 0 0 30px rgba(255,210,0,0.3);
+        color: rgba(0,0,0,0.5)
+    box-shadow: inset 0 0 35px #ccbfa3,3px 3px 5px 0 #ccc;
+
+      }
+      @media(max-width:830px){
+#btn{
+  width:60%;
+}
+.swiper-button-next{
+right:35%;
+}
+.swiper-button-prev{
+  left:35%;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 25px !important;
+  color:black !important
+}
+        .bg,.main_img{
+          margin-top:10px;
+          width:100%;
+          height:90%;
+        }
+.swiper{
+  overflow: scroll !important;
+}}

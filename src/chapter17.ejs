@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Two</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link href='css/swiper.css' rel='stylesheet'/>
+    <link href='css/search.css' rel='stylesheet'/>
+  <link href='css/telugu.css' rel='stylesheet'/>
+  <link href='css/style.css' rel='stylesheet'/>
+  <link href='css/font.css' rel='stylesheet'/>
+    <link href='css/sidenav.css' rel='stylesheet'/>
+    </head>
+   <body>
+
+<div class="sidenav">
+  <a href="/" target="_self"><div><img src="img/home.png" alt='home'/></div><div id='div'>Home</div></a>
+  <a href="#services"><div><img src="img/donate.png" alt='donate'/></div><div id='div'>donate</div></a>
+  <a href="#clients"><div><img src="img/follow.png" alt='follow'/></div><div id='div'>Follow</div></a>
+  <a href="/news" target='_self'><div><img src="img/books.png" alt='books'/></div><div id='div'>Books</div></a>
+  <a href="/contact" target='_self'><div><img src="img/contact.png" alt='contact'/></div><div id='div'>Contact</div></a>
+</div>
+
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper" id="swiper-wrapper-f59db66d6192e4b1">
+<%temp.forEach(function(tem){%>
+  <button class="swiper-slide">
+    <%=tem.value%>
+  </button>
+  <%})%>
+      </div>
+    </div>
+
+    <section
+      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+      class="swiper mySwiper2" >
+      <aside id="aside">
+        <nav class='animated bounceInDown'>
+  <ul>
+
+    <li><a href='#profile'>Contact</a></li>
+    <li class='sub-menu'><a href='#Follow'>Follow<div>&#9660;</div></a>
+      <ul>
+        <li><a href='https://www.facebook.com/iharicharan' target="_self">Facebook</a></li>
+        <li><a href='https://github.com/iharicharan'>GitHub</a></li>
+        <li><a href='https://www.linkedin.com/in/iharicharan/' target="_self">LinkedIn</a></li>
+      </ul>
+    </li>
+    <li class='sub-menu'><a href='/history'>Blog<div>&#9660;</div></a>
+    </li>
+
+  </ul>
+</nav>
+    </aside>
+
+        <div class="swiper-pagination"></div>
+        <section class="section_flex">
+
+  <select name="siteID" id="siteID" class="abcd" style="width:50%" onchange="location = this.value;">
+    <option value="">Select Chapter</option>  <%header.forEach(function(tem,k){%> <option value='<%=tem.href%>'>
+  Chapter <%=tem.value%></option> <%})%>
+  </select>
+  <select name="siteID" id="siteID" class="abcd" style="width:50%" onchange="location = this.value;">
+
+      <option value="">Select Versa</option>  <%temp.forEach(function(tem,k){%> <option value='<%=tem.id%>'>
+Versa <%=tem.value%></option> <%})%>
+
+  </select>
+
+      </section>
+      <center><span>chapter 17</span></center>
+
+      <div class="swiper-wrapper">
+
+      <%temp.forEach(function(tem){%>
+      <div class="swiper-slide" data-hash="<%=tem.value%>">
+<!--sharebuttons-->
+        <div class="share">
+          <a class="img_a" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sahilonline.org%2FnewsDetails.php%3Fcid%3D3%26nid%3D37477&p[title]=BJP got 'Modi oxygen,' will last till popularity remains:Sena&display=popup">
+          <img src="img/fb.png" alt="Share on Facebook" id="img_a">
+          </a>
+          <a class="img_a" href="https://twitter.com/intent/tweet?text=BJP got 'Modi oxygen,' will last till popularity remains:Sena&url=http%3A%2F%2Fwww.sahilonline.org%2FnewsDetails.php%3Fcid%3D3%26nid%3D37477&related=">
+          <img src="img/twitter.png" alt="Share on Twitter" id="img_a">
+          </a>
+          <a class="img_a" href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+          <img alt="Pin it" src="img/whatsapp.png" id="img_a">
+          </a>
+        </div>
+
+        <!--share buttons-->
+<div class='content'>
+        <pre><b><%-tem.name%></b></pre>
+        <p class='Translation'>Translation</p>
+        <pre><b><%-tem.tran%></b></pre>
+        <p class='Translation'>Word Meanings</p>
+        <pre><b><%-tem.meaning%></b></pre>
+    </div>
+</div>
+<%})%>
+
+</div>
+
+
+    <footer id='footer'>
+      <div>
+    <a href='/te_Chapters' target='_self'>
+      <svg fill="#000000"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      id="home">
+      <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 11 21 L 11 15 L 13 15 L 13 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z M 12 4.7910156 L 18 10.191406 L 18 11 L 18 19 L 15 19 L 15 13 L 9 13 L 9 19 L 6 19 L 6 10.191406 L 12 4.7910156 z"/>
+      </svg>
+
+    </a>
+    </div>
+    <div id='div'>
+    <span class="swiper-button-next"></span>
+    <span class="swiper-button-prev"></span>
+  </div>
+    <div>
+    <img src="img/menu_bar.png" class="menu_bar" alt="menu_bar" onclick="toggleMenu()"/>
+    <img src="img/close_bar.png" class="close_bar" alt="close_bar" onclick="toggleMenu1()" style='display:none'/>
+</div>
+    </footer>
+
+
+</section>
+
+<script src="js/search.js" type="text/javascript"></script>
+<script src="js/search2.js" type="text/javascript"></script>
+<script src="js/swiper.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script>
+$(function () {
+  $("select").select2();
+});
+</script>
+<script>
+function toggleMenu() {
+  let element = document.querySelector("aside")
+let x=document.getElementsByClassName('menu_bar')[0]
+let y=document.getElementsByClassName('close_bar')[0]
+x.style.display='none'
+y.style.display='flex'
+element.classList.toggle("active");
+}
+function toggleMenu1() {
+  let element = document.querySelector("aside")
+let x=document.getElementsByClassName('menu_bar')[0]
+let y=document.getElementsByClassName('close_bar')[0]
+x.style.display='flex'
+y.style.display='none'
+element.classList.toggle("active");
+}
+
+
+
+</script>
+<script>
+$('.sub-menu ul').hide();
+$(".sub-menu a").click(function () {
+	$(this).parent(".sub-menu").children("ul").slideToggle("100");
+});
+
+</script>
+
+
+
+</body>
+</html>
