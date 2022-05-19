@@ -5,7 +5,7 @@
   name="viewport"
   content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
 />
-<link href='css/font.css' rel='stylesheet'/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link href='css/font.css' rel='stylesheet'/>
 <link href='css/telugu.css' rel='stylesheet'/>
 <link href='css/bg.css' rel='stylesheet'/>
@@ -17,8 +17,28 @@
     <span id=#span><b>Bhagavad-Gita</b></span>
   </div>
 
-    <div>  <img src="img/v_bars.png" id="header_bars"/></div>
+    <div>  <img src="img/v_bars.png" id="header_bars"  onclick="toggleMenu()"/></div>
   </header>
+
+  <aside id="aside">
+    <nav class='animated bounceInDown'>
+<ul>
+
+<li><a href='#profile'>Contact</a></li>
+<li class='sub-menu'><a href='#Follow'>Follow<div>&#9660;</div></a>
+  <ul>
+    <li><a href='https://www.facebook.com/iharicharan' target="_self">Facebook</a></li>
+    <li><a href='https://github.com/iharicharan'>GitHub</a></li>
+    <li><a href='https://www.linkedin.com/in/iharicharan/' target="_self">LinkedIn</a></li>
+  </ul>
+</li>
+<li class='sub-menu'><a href='/history'>Blog<div>&#9660;</div></a>
+</li>
+
+</ul>
+</nav>
+</aside>
+
   <div class="search">
     <center>
     <input type="text" placeholder="Search Number"  class="search-input"/>
@@ -58,6 +78,19 @@ function search(e) {
     tit.includes(searchTerm) ? title.style.display = 'block' : title.style.display = 'none';
   });
 }
+</script>
+<script>
+function toggleMenu() {
+  let element = document.querySelector("aside")
+element.classList.toggle("active");
+}
+</script>
+<script>
+$('.sub-menu ul').hide();
+$(".sub-menu a").click(function () {
+	$(this).parent(".sub-menu").children("ul").slideToggle("100");
+});
+
 </script>
 </body>
 </html>
