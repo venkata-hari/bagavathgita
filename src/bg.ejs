@@ -6,13 +6,58 @@
   content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
 />
 <link href='css/font.css' rel='stylesheet'/>
+<link href='css/font.css' rel='stylesheet'/>
 <link href='css/telugu.css' rel='stylesheet'/>
 <link href='css/bg.css' rel='stylesheet'/>
 </head>
 <body class='main_bg'>
-  <div class='image_bg'>
-<a href="/te_Chapters" class="bg_te">భగవద్గీత తెలుగులో.. »</a>
-
+  <header class="header">
+    <div class="header_div">
+<img src="img/header_bg1.jpg" id="header_img" alt="left"/>
+    <span id=#span><b>Bhagavad-Gita</b></span>
   </div>
+
+    <div>  <img src="img/v_bars.png" id="header_bars"/></div>
+  </header>
+  <div class="search">
+    <center>
+    <input type="text" placeholder="Search Number"  class="search-input"/>
+  </center>
+  </div>
+  <div class='main'>
+    <center>
+      <%temp.forEach(function(tem){%>
+  <section class="title">
+    <div>
+    <h3><b><%-tem.name%></b></h3>
+  </div>
+  <div id="center_child">
+      <a href="<%=tem.href%>" target="_self" id="child"><button><%-tem.id%></button></a>
+      <a href="<%=tem.href2%>" target="_self" id="child"><button><%-tem.id2%></button></a>
+</div>
+  </section>
+  <%})%>
+</center>
+</div>
+<script>
+// get input field and add 'keyup' event listener
+let searchInput = document.querySelector('.search-input');
+searchInput.addEventListener('keyup', search);
+
+let titles = document.querySelectorAll('.main .title');
+let searchTerm = '';
+let tit = '';
+
+function search(e) {
+  searchTerm = e.target.value.toLowerCase();
+
+  titles.forEach((title) => {
+
+    tit = title.textContent.toLowerCase();
+
+    tit.includes(searchTerm) ? title.style.display = 'block' : title.style.display = 'none';
+  });
+}
+</script>
 </body>
 </html>

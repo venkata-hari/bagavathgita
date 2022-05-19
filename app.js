@@ -9,10 +9,11 @@ app.use('/js',express.static('Public/js'));
 app.set('views','./src')
 app.set('view engine','ejs')
 
-app.get('/',(req,res)=>{
-  res.render('bg')
-})
+
 //Routers//
+const bg=require('./src/bg');
+app.use('/',bg)
+
 const Router1=require('./src/chapter1');
 app.use('/chapter1',Router1)
 
