@@ -1,7 +1,26 @@
 
+.sidenav{
+  position: fixed;
+  width:100%;
+  padding:10px;
+  height:100vh;
+  background-color:black;
+}
+.sidenav a{
 
-
-
+  margin-top:10px;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  display: flex;
+  text-decoration: none;
+  padding:14px;
+  color:white;
+  margin-top:25px;
+  border-bottom:1px solid grey;
+}
+.sidenav a #div{
+  margin-left:10px;
+  margin-top:6px;
+}
 *{
   margin:0;
   padding:0;
@@ -14,10 +33,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-body{
-  width:100%;
-  font-family: 'Mochiy Pop P One', sans-serif;
-}
+
 .Translation{
 color:black;
 background:#fff3b0;
@@ -74,13 +90,13 @@ font-size: 17.9px;;
 .mySwiper2 {
     font-family: 'Mochiy Pop P One', sans-serif;
   height: 92vh;
-  width: 80%;
+  width: 84%;
   border:1px solid grey;
   margin-left:15%;
 }
 
 .mySwiper {
-  width:80.3%;
+  width:84.1%;
   margin-left:15%;
   height: 10%;
   box-sizing: border-box;

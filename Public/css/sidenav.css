@@ -42,7 +42,7 @@ aside {
   z-index:900;
   width: 300px;
   height:100%;
-  background: #383838;
+  background:black;
   right: -300px;
   top: 0;
   box-sizing: border-box;
@@ -72,7 +72,7 @@ nav ul li {
 nav ul li a {
 	display:flex;
   justify-content: space-between;
-	padding: 10px 15px;
+	padding: 25px;
 	text-decoration: none;
 	-webkit-transition: 0.2s linear;
 	-moz-transition: 0.2s linear;
@@ -81,19 +81,12 @@ nav ul li a {
 	transition: 0.2s linear;
 }
 
-nav ul li a .fa {
-	width: 16px;
-	text-align: center;
-	margin-right: 5px;
-	float:right;
-}
-nav ul ul {
-  color:black;
-	background-color:#ebebeb;
-}
+
+
 nav ul li ul li a {
-	background: #f8f8f8;
-	border-left: 4px solid transparent;
+  color:white;
+  border-bottom:1px solid black;
+	background: linear-gradient(120deg,rgba(196, 54, 4),rgba(239, 88, 33),rgba(253, 98, 42));
 	padding: 10px 20px;
 }
 nav ul li ul li a:hover {

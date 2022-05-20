@@ -1,6 +1,7 @@
 const express=require('express')
 const Router1=express.Router()
 Router1.get('',async(req,res)=>{
+  res.set('Cache-Control','src,max-age=300,s-maxage=600');
   res.render('chapter1',{
     header:[{"href":"Chapter1","value":"1"},
     {"href":"Chapter2","value":"2"},
