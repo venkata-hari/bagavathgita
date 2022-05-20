@@ -15,6 +15,7 @@
    <body id="body">
 
 <div class="sidenav">
+
   <a href="/" target="_self"><div><img src="img/home.png" alt='home'/></div><div id='div'>Home</div></a>
   <a href="#services"><div><img src="img/donate.png" alt='donate'/></div><div id='div'>donate</div></a>
   <a href="#clients"><div><img src="img/follow.png" alt='follow'/></div><div id='div'>Follow</div></a>
@@ -57,7 +58,6 @@
 
         <div class="swiper-pagination"></div>
         <section class="section_flex">
-
   <select name="siteID" id="siteID" class="abcd" style="width:50%" onchange="location = this.value;">
     <option value="">Select Chapter</option>  <%header.forEach(function(tem,k){%> <option value='<%=tem.href%>'>
   Chapter <%=tem.value%></option> <%})%>
@@ -101,7 +101,10 @@ Versa <%=tem.value%></option> <%})%>
 <%})%>
 
 </div>
-
+<div id="desktop_prev_next">
+<span class="swiper-button-next"></span>
+<span class="swiper-button-prev"></span>
+</div>
     <footer id='footer'>
       <div>
     <a href='/' target='_self'>

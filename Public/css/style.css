@@ -1,14 +1,37 @@
-
+*{
+  margin: 0;
+  padding:0;
+}
 .sidenav{
+
   position: fixed;
   width:100%;
-  padding:10px;
+
   height:100vh;
   background-color:black;
 }
+.sidenav a #div{
+  margin-top:5px;
+  margin-left:6px;
+}
+#desktop_prev_next {
+display: block;
+position: fixed;
+z-index: 900;
+left:10px;
+color:white;
+bottom:80px;
+}
+#desktop_prev_next .swiper-button-next{
+  color:white !important;
+}
+#desktop_prev_next .swiper-button-next{
+  margin-left:100px;
+}
+.swiper-button-next:hover{
+  color:yellow;
+}
 .sidenav a{
-
-  margin-top:10px;
   font-family: 'Mochiy Pop P One', sans-serif;
   display: flex;
   text-decoration: none;
@@ -17,14 +40,7 @@
   margin-top:25px;
   border-bottom:1px solid grey;
 }
-.sidenav a #div{
-  margin-left:10px;
-  margin-top:6px;
-}
-*{
-  margin:0;
-  padding:0;
-}
+
 
 .content{
   margin-bottom:40%;
@@ -152,13 +168,7 @@ font-size: 17.9px;;
 .mySwiper2 .swiper-wrapper .share-btn svg:hover{
   fill:rgb(255, 31, 0);
 }
-.swiper-button-next, .swiper-button-prev{
-color:black !important;
 
-}
-.swiper-button-next::after, .swiper-button-prev::after{
-  font-size:25px !important;
-}
 footer{
   color:white;
   display: none;
@@ -179,10 +189,40 @@ footer{
 ::-webkit-scrollbar-thumb:hover {
   background:black;
 }
+#footer{
+  display: none;
+}
 @media(max-width:830px){
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 10px;
+    left: auto;
+}
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: calc(var(--swiper-navigation-size)/ 44 * 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+}
+  .swiper-button-next, .swiper-button-prev{
+  color:black !important;
+
+  }
+  .swiper-button-next::after, .swiper-button-prev::after{
+    font-size:25px !important;
+  }
   body{
     width:100%;
     margin-left:0px;
+  }
+  #desktop_prev_next {
+    display: none;
   }
   .sidenav {
     display: none;
