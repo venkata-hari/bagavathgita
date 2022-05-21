@@ -10,19 +10,16 @@
   <link href='css/style.css' rel='stylesheet'/>
   <link href='css/font.css' rel='stylesheet'/>
     <link href='css/sidenav.css' rel='stylesheet'/>
-
     </head>
-   <body id="body">
+   <body>
 
 <div class="sidenav">
-
   <a href="/" target="_self"><div><img src="img/home.png" alt='home'/></div><div id='div'>Home</div></a>
   <a href="#services"><div><img src="img/donate.png" alt='donate'/></div><div id='div'>donate</div></a>
   <a href="#clients"><div><img src="img/follow.png" alt='follow'/></div><div id='div'>Follow</div></a>
   <a href="/news" target='_self'><div><img src="img/books.png" alt='books'/></div><div id='div'>Books</div></a>
   <a href="/contact" target='_self'><div><img src="img/contact.png" alt='contact'/></div><div id='div'>Contact</div></a>
 </div>
-
 
     <div thumbsSlider="" class="swiper mySwiper">
       <div class="swiper-wrapper" id="swiper-wrapper-f59db66d6192e4b1">
@@ -34,7 +31,7 @@
       </div>
     </div>
 
-    <div
+    <section
       style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
       class="swiper mySwiper2" >
       <aside id="aside">
@@ -58,6 +55,7 @@
 
         <div class="swiper-pagination"></div>
         <section class="section_flex">
+
   <select name="siteID" id="siteID" class="abcd" style="width:50%" onchange="location = this.value;">
     <option value="">Select Chapter</option>  <%header.forEach(function(tem,k){%> <option value='<%=tem.href%>'>
   Chapter <%=tem.value%></option> <%})%>
@@ -78,13 +76,13 @@ Versa <%=tem.value%></option> <%})%>
       <div class="swiper-slide" data-hash="<%=tem.value%>">
 <!--sharebuttons-->
         <div class="share">
-          <a class="img_a" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sahilonline.org%2FnewsDetails.php%3Fcid%3D3%26nid%3D37477&p[title]=BJP got 'Modi oxygen,' will last till popularity remains:Sena&display=popup">
+        <a class="img_a" href="https://www.facebook.com/share.php?u=https://geeth-0.herokuapp.com/&quote=<%-tem.name%>%0D%0A%0D%0A<%-tem.tran%>">
           <img src="img/fb.png" alt="Share on Facebook" id="img_a">
-          </a>
-          <a class="img_a" href="https://twitter.com/intent/tweet?text=BJP got 'Modi oxygen,' will last till popularity remains:Sena&url=http%3A%2F%2Fwww.sahilonline.org%2FnewsDetails.php%3Fcid%3D3%26nid%3D37477&related=">
+        </a>
+          <a class="img_a" href="https://twitter.com/intent/tweet?text=<%-tem.name%>%0a%0a<%-tem.tran%>%0a&url=https://geeth-0.herokuapp.com/">
           <img src="img/twitter.png" alt="Share on Twitter" id="img_a">
           </a>
-          <a class="img_a" href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+          <a class="img_a" target="_self" href="https://web.whatsapp.com/send?text=*<%-tem.name%>*%0a%0a*<%-tem.tran%>*%0a%0a|https://geeth-0.herokuapp.com/" data-action="share/whatsapp/share">
           <img alt="Pin it" src="img/whatsapp.png" id="img_a">
           </a>
         </div>
@@ -101,10 +99,8 @@ Versa <%=tem.value%></option> <%})%>
 <%})%>
 
 </div>
-<div id="desktop_prev_next">
-<span class="swiper-button-next"></span>
-<span class="swiper-button-prev"></span>
-</div>
+
+
     <footer id='footer'>
       <div>
     <a href='/' target='_self'>
@@ -128,7 +124,7 @@ Versa <%=tem.value%></option> <%})%>
     </footer>
 
 
-</div>
+</section>
 
 <script src="js/search.js" type="text/javascript"></script>
 <script src="js/search2.js" type="text/javascript"></script>
