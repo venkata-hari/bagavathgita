@@ -16,11 +16,24 @@
 <div class="sidenav">
   <a href="/" target="_self"><div><img src="img/home.png" alt='home'/></div><div id='div'>Home</div></a>
   <a href="#services"><div><img src="img/donate.png" alt='donate'/></div><div id='div'>donate</div></a>
-  <a href="#clients"><div><img src="img/follow.png" alt='follow'/></div><div id='div'>Follow</div></a>
-  <a href="/news" target='_self'><div><img src="img/books.png" alt='books'/></div><div id='div'>Books</div></a>
+  <a href="#follow" onclick="follow()"><div><img src="img/follow.png" alt='follow'/></div><div id='div'>Follow</div></a>
+  <a href="/history" target='_self'><div><img src="img/books.png" alt='books'/></div><div id='div'>Blog</div></a>
   <a href="/contact" target='_self'><div><img src="img/contact.png" alt='contact'/></div><div id='div'>Contact</div></a>
 </div>
-
+<!--pop_menu-->
+<section class="section_pop_menu" style="display:none">
+  <div class="pop_menu">
+  <div class="pop_menu_share_btns">
+  <a href="https://www.facebook.com/iharicharan" style="width:50px" id="share_img"><img src="img/facebook.gif" style="width:100%" id="share_img" alt=""/></a>
+  <a href="https://github.com/iharicharan" style="width:45px;margin-right:8px" id="share_img"><img src="img/github.gif" alt="" style="width:100%" id="share_img"/></a>
+  <a href="https://www.linkedin.com/in/iharicharan/" style="width:60px"><img src="img/linkedin.webp"  style="width:100%" alt="" id="share_img"/></a>
+</div>
+<div class="pop_menu_share_close">
+<img src="img/close_bar.png" id="share_close" onclick="share_close()"/>
+</div>
+</div>
+</section>
+<!--pop_menu-->
     <div thumbsSlider="" class="swiper mySwiper">
       <div class="swiper-wrapper" id="swiper-wrapper-f59db66d6192e4b1">
 <%temp.forEach(function(tem){%>
@@ -165,6 +178,15 @@ $(".sub-menu a").click(function () {
 </script>
 
 
-
+<script>
+ function follow(){
+   let x=document.getElementsByClassName('section_pop_menu')[0];
+   x.style.display="block";
+ }
+ function share_close(){
+   let x=document.getElementsByClassName('section_pop_menu')[0];
+   x.style.display="none";
+ }
+</script>
 </body>
 </html>

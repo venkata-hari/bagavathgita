@@ -19,6 +19,30 @@
 
     <div>  <img src="img/v_bars.png" id="header_bars"  onclick="toggleMenu()"/></div>
   </header>
+
+  <!--desktop-->
+<section class="side">
+  <a href="" id="a"><div><img src="img/contact.png" alt="contact"/></div><div id="txt">Contact</div></a>
+  <a href="#follow" id="a" onclick="follow()"><div><img src="img/follow.png" alt="follow" /></div><div id="txt">Follow</div></span>
+  <a href="/history" id="a"><div><img src="img/Books.png" alt="Blog"/></div><div id="txt">Blog</div></a>
+  <a href="" id="a"><div><img src="img/donate.png" alt="follow"/></div><div id="txt">Donate</div></a>
+</section>
+<!--pop_menu-->
+<section class="section_pop_menu" style="display:none">
+  <div class="pop_menu">
+  <div class="pop_menu_share_btns">
+  <a href="https://www.facebook.com/iharicharan" style="width:50px" id="share_img"><img src="img/facebook.gif" style="width:100%" id="share_img" alt=""/></a>
+  <a href="https://github.com/iharicharan" style="width:45px;margin-right:8px" id="share_img"><img src="img/github.gif" alt="" style="width:100%" id="share_img"/></a>
+  <a href="https://www.linkedin.com/in/iharicharan/" style="width:60px"><img src="img/linkedin.webp"  style="width:100%" alt="" id="share_img"/></a>
+</div>
+<div class="pop_menu_share_close">
+<a href="/" id="share_close"><img src="img/close_bar.png" id="share_close"/></a>
+</div>
+</div>
+</section>
+  <!--desktop-->
+
+
   <aside id="aside">
     <nav class='animated bounceInDown'>
 <ul>
@@ -44,7 +68,7 @@
 </center>
 </div>
   <div class='main'>
-    <center>
+
       <%temp.forEach(function(tem){%>
   <section class="title">
     <div>
@@ -55,9 +79,17 @@
       <a href="<%=tem.href2%>" target="_self" id="child"><button><%-tem.id2%></button></a>
 </div>
   </section>
+
   <%})%>
-</center>
+    <br></br>
 </div>
+<script>
+ function follow(){
+   let x=document.getElementsByClassName('section_pop_menu')[0];
+   x.style.display="block";
+ }
+
+</script>
 <script>
 // get input field and add 'keyup' event listener
 let searchInput = document.querySelector('.search-input');
@@ -77,8 +109,7 @@ function search(e) {
     tit.includes(searchTerm) ? title.style.display = 'block' : title.style.display = 'none';
   });
 }
-</script>
-<script>
+
 function toggleMenu() {
   let element = document.querySelector("aside")
 element.classList.toggle("active");
@@ -89,7 +120,7 @@ $('.sub-menu ul').hide();
 $(".sub-menu a").click(function () {
 	$(this).parent(".sub-menu").children("ul").slideToggle("100");
 });
-
 </script>
+
 </body>
 </html>

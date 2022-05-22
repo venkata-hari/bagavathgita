@@ -71,10 +71,8 @@ app.use('/chapter18',Router18)
 const science=require('./src/history')
 app.use('/history', science)
 //Routers//
-app.get('/',(req,res)=>{
-  res.render('bg')
-})
-app.get('/te_Chapters',(req,res)=>{
+
+app.get('/#te_Chapters',(req,res)=>{
   res.render('temp')
 })
 

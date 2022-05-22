@@ -2,6 +2,39 @@
   margin: 0;
   padding:0;
 }
+.pop_menu{
+  position:fixed;
+  display: flex;
+  justify-content:space-between;
+  z-index:900;
+  background-color:orange;
+  width:40%;
+  height:30%;
+  box-shadow:0 0 3px grey;
+  margin-left:35%;
+  margin-top:5%;
+
+}
+.select2-container{
+  width:50% !important;
+  font-family: 'Mochiy Pop P One', sans-serif;
+  text-align:center !important;
+}
+.pop_menu .pop_menu_share_btns{
+display: flex;
+justify-content:center;
+align-items: center;
+align-content: center;
+margin-left:30%;
+}
+.pop_menu .pop_menu_share_btns #share_img{
+  margin-left:10px;
+}
+.pop_menu .pop_menu_share_close #share_close{
+  width:30px;
+  margin-right:6px;
+  margin-top:6px;
+}
 .sidenav{
 
   position: fixed;
@@ -261,7 +294,6 @@ svg:hover{
   height:12%;
 }
 .swiper-pagination{
-  margin-top:10px;
   top:0;
 }
 }
