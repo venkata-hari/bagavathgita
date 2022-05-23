@@ -72,7 +72,7 @@ const science=require('./src/history')
 app.use('/history', science)
 //Routers//
 
-app.get('/#te_Chapters',(req,res)=>{
+app.get('/te_Chapters',(req,res)=>{
   res.render('temp')
 })
 
