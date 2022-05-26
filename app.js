@@ -8,8 +8,6 @@ app.use('/css',express.static('Public/css'));
 app.use('/js',express.static('Public/js'));
 app.set('views','./src')
 app.set('view engine','ejs')
-
-
 //Routers//
 const bg=require('./src/bg');
 app.use('/',bg)
