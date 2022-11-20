@@ -9,8 +9,8 @@ app.use('/js',express.static('Public/js'));
 app.set('views','./src')
 app.set('view engine','ejs')
 //Routers//
-const bg=require('./src/bg');
-app.use('/',bg)
+const index=require('./src/index');
+app.use('/',index)
 
 const Router1=require('./src/chapter1');
 app.use('/chapter1',Router1)

@@ -1,7 +1,7 @@
 const express=require('express')
 const bg=express.Router()
 bg.get('',async(req,res)=>{
-  res.render('bg',{
+  res.render('index',{
     temp:[
       {"name":"1.అర్జున విషాద యోగము","id":"Open","id2":"Description","href2":"/te_chapters#Chapter1","href":"/Chapter1"},
       {"name":"2.సాంఖ్య యోగము","id":"Open","id2":"Description","href2":"/te_chapters#Chapter2","href":"/Chapter2"},
